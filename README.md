@@ -1,2 +1,4 @@
 # Kolesa-App
-аналог приложение Kolesa
+
+
+MVP 1.0 - Kolesa App.
