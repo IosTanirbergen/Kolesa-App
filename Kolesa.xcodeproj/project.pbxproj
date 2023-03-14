@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DCD857229BF3B3C00229648 /* AutorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD857129BF3B3C00229648 /* AutorizationView.swift */; };
+		1DCD857429BF429000229648 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD857329BF429000229648 /* RegisterTextField.swift */; };
 		839114BB29BC7303001CAC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839114BA29BC7303001CAC02 /* AppDelegate.swift */; };
 		839114BF29BC7303001CAC02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839114BE29BC7303001CAC02 /* HomeViewController.swift */; };
 		839114C429BC7305001CAC02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839114C329BC7305001CAC02 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DCD857129BF3B3C00229648 /* AutorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationView.swift; sourceTree = "<group>"; };
+		1DCD857329BF429000229648 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
 		839114B729BC7303001CAC02 /* Kolesa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kolesa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839114BA29BC7303001CAC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839114BE29BC7303001CAC02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DCD856F29BF392A00229648 /* Autorizartion */ = {
+			isa = PBXGroup;
+			children = (
+				1DCD857029BF3AF900229648 /* View */,
+			);
+			path = Autorizartion;
+			sourceTree = "<group>";
+		};
+		1DCD857029BF3AF900229648 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DCD857129BF3B3C00229648 /* AutorizationView.swift */,
+				1DCD857329BF429000229648 /* RegisterTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		839114AE29BC7303001CAC02 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +113,7 @@
 		839114CF29BC7318001CAC02 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				1DCD856F29BF392A00229648 /* Autorizartion */,
 				839114D729BC737C001CAC02 /* Home */,
 			);
 			path = Flows;
@@ -279,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				839114BF29BC7303001CAC02 /* HomeViewController.swift in Sources */,
+				1DCD857429BF429000229648 /* RegisterTextField.swift in Sources */,
 				839114EC29BC7555001CAC02 /* StoriesTableViewCell.swift in Sources */,
 				839114DD29BC73B8001CAC02 /* HomeBuilder.swift in Sources */,
 				839114ED29BC7555001CAC02 /* GridMenuColllectionViewCell.swift in Sources */,
@@ -287,6 +310,7 @@
 				839114F129BC7572001CAC02 /* HomeHeaderView.swift in Sources */,
 				839114E129BC742D001CAC02 /* HomeVIewModel.swift in Sources */,
 				839114EE29BC7555001CAC02 /* PostsTableViewCell.swift in Sources */,
+				1DCD857229BF3B3C00229648 /* AutorizationView.swift in Sources */,
 				839114BB29BC7303001CAC02 /* AppDelegate.swift in Sources */,
 				839114D629BC735B001CAC02 /* Protocols.swift in Sources */,
 			);
