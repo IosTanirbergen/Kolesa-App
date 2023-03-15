@@ -11,21 +11,22 @@ final class AutorizationView: UIViewController {
     
     lazy var numberTextField: UITextField = {
         
-        let TF = RegisterTextField(placeholder: "Введите номер телефона")
-        TF.delegate = self
+        let tF = RegisterTextField(placeholder: "Введите номер телефона")
+        tF.delegate = self
         //        let RV = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
         //        RV.addSubview(deleteButton)
         //        TF.rightView = deleteButton
         //        TF.rightViewMode = .always
-        TF.addTarget(self, action: #selector(checkTF), for: .allEvents)
-        return TF
+        tF.addTarget(self, action: #selector(checkTF), for: .allEvents)
+        return tF
     }()
+    
     lazy var imageView: UIImageView = {
         
-        let IV = UIImageView()
-        IV.image = UIImage(named: "kolesa")
+        let iV = UIImageView()
+        iV.image = UIImage(named: "kolesa")
         
-        return IV
+        return iV
     }()
 
     lazy var deleteButton: UIButton = {
@@ -37,6 +38,7 @@ final class AutorizationView: UIViewController {
 
         return button
     }()
+    
     lazy var goButton: UIButton = {
         
         let button = UIButton()
@@ -55,15 +57,15 @@ final class AutorizationView: UIViewController {
         super.viewDidLoad()
         setup()
     }
+    
     private func setup(){
         initialize()
         makeConstraints()
     }
+    
     private func initialize(){
         view.backgroundColor = .white
-        view.addSubview(numberTextField)
-        view.addSubview(goButton)
-        view.addSubview(imageView)
+        view.addSubviews([numberTextField, goButton, imageView])
     }
     private func makeConstraints(){
         numberTextField.snp.makeConstraints { make in
@@ -84,6 +86,7 @@ final class AutorizationView: UIViewController {
             make.top.equalTo(numberTextField.snp.bottom).offset(16)
         }
     }
+    
     @objc func checkTF(){
         if numberTextField.text != nil {
 
@@ -112,6 +115,7 @@ extension AutorizationView: UITextFieldDelegate {
                                                     alpha: 1).cgColor
         return true
     }
+    
     override func touchesBegan(_ touches:Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
             numberTextField.layer.borderColor = UIColor(red: 242/255,
