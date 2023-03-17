@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70DC882D29C22923005F1BFC /* KolesaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC882C29C22923005F1BFC /* KolesaTabBarController.swift */; };
+		70DC882F29C22ABA005F1BFC /* FavViewCOntroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC882E29C22ABA005F1BFC /* FavViewCOntroller.swift */; };
+		70DC883329C442B8005F1BFC /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC883229C442B8005F1BFC /* AdViewController.swift */; };
+		70DC883929C4E92E005F1BFC /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC883829C4E92E005F1BFC /* MessagesViewController.swift */; };
+		70DC883D29C4E997005F1BFC /* ProfileViewConctroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC883C29C4E997005F1BFC /* ProfileViewConctroller.swift */; };
 		839114BB29BC7303001CAC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839114BA29BC7303001CAC02 /* AppDelegate.swift */; };
 		839114BF29BC7303001CAC02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839114BE29BC7303001CAC02 /* HomeViewController.swift */; };
 		839114C429BC7305001CAC02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839114C329BC7305001CAC02 /* Assets.xcassets */; };
@@ -24,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70DC882C29C22923005F1BFC /* KolesaTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolesaTabBarController.swift; sourceTree = "<group>"; };
+		70DC882E29C22ABA005F1BFC /* FavViewCOntroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewCOntroller.swift; sourceTree = "<group>"; };
+		70DC883229C442B8005F1BFC /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
+		70DC883829C4E92E005F1BFC /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		70DC883C29C4E997005F1BFC /* ProfileViewConctroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewConctroller.swift; sourceTree = "<group>"; };
 		839114B729BC7303001CAC02 /* Kolesa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kolesa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839114BA29BC7303001CAC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839114BE29BC7303001CAC02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +63,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70DC882B29C228F5005F1BFC /* KolesaTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				70DC882C29C22923005F1BFC /* KolesaTabBarController.swift */,
+			);
+			path = KolesaTabBar;
+			sourceTree = "<group>";
+		};
+		70DC883029C4421C005F1BFC /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				70DC883129C442AE005F1BFC /* Cotrnoller */,
+			);
+			path = Ad;
+			sourceTree = "<group>";
+		};
+		70DC883129C442AE005F1BFC /* Cotrnoller */ = {
+			isa = PBXGroup;
+			children = (
+				70DC883229C442B8005F1BFC /* AdViewController.swift */,
+			);
+			path = Cotrnoller;
+			sourceTree = "<group>";
+		};
+		70DC883429C44331005F1BFC /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				70DC883529C44338005F1BFC /* Controller */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		70DC883529C44338005F1BFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70DC882E29C22ABA005F1BFC /* FavViewCOntroller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70DC883629C4E912005F1BFC /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				70DC883729C4E917005F1BFC /* Controller */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		70DC883729C4E917005F1BFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70DC883829C4E92E005F1BFC /* MessagesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70DC883A29C4E973005F1BFC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				70DC883B29C4E989005F1BFC /* Controller */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		70DC883B29C4E989005F1BFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70DC883C29C4E997005F1BFC /* ProfileViewConctroller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		839114AE29BC7303001CAC02 = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +174,12 @@
 		839114CF29BC7318001CAC02 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				70DC882B29C228F5005F1BFC /* KolesaTabBar */,
 				839114D729BC737C001CAC02 /* Home */,
+				70DC883429C44331005F1BFC /* Favourites */,
+				70DC883029C4421C005F1BFC /* Ad */,
+				70DC883629C4E912005F1BFC /* Messages */,
+				70DC883A29C4E973005F1BFC /* Profile */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -278,16 +365,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DC883929C4E92E005F1BFC /* MessagesViewController.swift in Sources */,
 				839114BF29BC7303001CAC02 /* HomeViewController.swift in Sources */,
+				70DC883329C442B8005F1BFC /* AdViewController.swift in Sources */,
 				839114EC29BC7555001CAC02 /* StoriesTableViewCell.swift in Sources */,
+				70DC882F29C22ABA005F1BFC /* FavViewCOntroller.swift in Sources */,
 				839114DD29BC73B8001CAC02 /* HomeBuilder.swift in Sources */,
 				839114ED29BC7555001CAC02 /* GridMenuColllectionViewCell.swift in Sources */,
 				839114DF29BC7426001CAC02 /* HomeCoordinator.swift in Sources */,
 				839114EB29BC7555001CAC02 /* GridMenuTableViewCell.swift in Sources */,
 				839114F129BC7572001CAC02 /* HomeHeaderView.swift in Sources */,
+				70DC883D29C4E997005F1BFC /* ProfileViewConctroller.swift in Sources */,
 				839114E129BC742D001CAC02 /* HomeVIewModel.swift in Sources */,
 				839114EE29BC7555001CAC02 /* PostsTableViewCell.swift in Sources */,
 				839114BB29BC7303001CAC02 /* AppDelegate.swift in Sources */,
+				70DC882D29C22923005F1BFC /* KolesaTabBarController.swift in Sources */,
 				839114D629BC735B001CAC02 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
