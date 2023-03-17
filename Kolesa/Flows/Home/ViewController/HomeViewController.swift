@@ -7,10 +7,14 @@
 
 import UIKit
 
+protocol HomeViewControllerDelegate: AnyObject {
+    func viewController(_ viewController: UIViewController, isScrolling: Bool)
+}
+
 final class HomeViewController: UIViewController {
     
     private let headerView = HomeHeaderView()
-    
+        
     private lazy var homeTableView: UITableView = {
         let tb = UITableView()
         tb.delegate = self
@@ -18,10 +22,13 @@ final class HomeViewController: UIViewController {
         return tb
     }()
     
+    public weak var delegate: HomeViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        tabBarController?.delegate = self
         setupConstraints()
         registerTableViewCells()
     }
@@ -59,14 +66,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             guard let storiesCell = tableView.dequeueReusableCell(withIdentifier: StoriesTableViewCell.description(), for: indexPath) as? StoriesTableViewCell
             else {
-               return UITableViewCell()
+                return UITableViewCell()
             }
             
             return storiesCell
         case 1:
             guard let gridCell = tableView.dequeueReusableCell(withIdentifier: GridMenuTableViewCell.description(), for: indexPath) as? GridMenuTableViewCell
             else {
-               return UITableViewCell()
+                return UITableViewCell()
             }
             
             return gridCell
@@ -97,5 +104,37 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offset = scrollView.contentOffset.y
+        var isScrolling = false
+        if offset > 200 {
+            isScrolling = true
+        } else {
+            isScrolling = false
+        }
+        
+        delegate?.viewController(self, isScrolling: isScrolling)
+    }
+}
+
+
+extension HomeViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        guard
+            let navController = viewController as? UINavigationController,
+            let rootViewController = navController.viewControllers.first
+        else { return true }
+        
+        if rootViewController == self {
+            homeTableView.setContentOffset(CGPoint.zero, animated: true)
+        }
+        
+        DispatchQueue.main.async {
+            self.delegate?.viewController(self, isScrolling: false)
+        }
+        
+        return true
     }
 }
