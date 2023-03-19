@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 final class AuthorizationViewController: UIViewController {
 
@@ -78,6 +79,7 @@ extension AuthorizationViewController: UITableViewDelegate, UITableViewDataSourc
             guard let cell = tableView.dequeueReusableCell(withIdentifier: UserDefaultTableViewCell.description(), for: indexPath) as?
                     UserDefaultTableViewCell else { return UITableViewCell() }
             cell.phoneNumberTextField.addTarget(self, action: #selector(changeState), for: .allEditingEvents)
+            cell.nextButton.addTarget(self, action: #selector(login), for: .touchUpInside)
             return cell
         case .none:
             print("none")
@@ -89,7 +91,7 @@ extension AuthorizationViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 600
+        return 400
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -100,11 +102,17 @@ extension AuthorizationViewController: UITableViewDelegate, UITableViewDataSourc
         return 1
         
     }
-    @objc func checkState() {
+    @objc func checkState(sender: UIButton) {
+        
         viewModel.updateState(state: .defaultUser)
+        
     }
     @objc func changeState() {
         viewModel.updateState(state: .defaultState)
+    }
+    @objc func login() {
+        Auth.auth().createUser(withEmail: "87055134407", password: "lolkek")
+        
     }
 }
 

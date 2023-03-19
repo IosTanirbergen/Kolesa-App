@@ -17,7 +17,7 @@ final class AuthorizationViewModel {
     
     var state: AuthorizationCellEnum = .none
     
-    var userNumber: String = ""
+    var userMail: String = ""
     
     var updateView: (() -> ())?
     
@@ -34,9 +34,9 @@ final class AuthorizationViewModel {
         self.state = state
         updateView?()
     }
-    func changeNumber(state: AuthorizationCellEnum, phoneNumber: String) {
+    func changeNumber(state: AuthorizationCellEnum, mail: String) {
         self.state = state
-        self.userNumber = phoneNumber
+        self.userMail = mail
         updateView?()
     }
     

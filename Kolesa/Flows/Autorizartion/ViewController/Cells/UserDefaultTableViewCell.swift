@@ -36,7 +36,7 @@ class UserDefaultTableViewCell: UITableViewCell {
     lazy var nextButton: UIButton = {
         
         let button = UIButton()
-        button.setTitle("Продолжить", for: .normal)
+        button.setTitle("Войти", for: .normal)
         button.backgroundColor = .systemGray
         button.layer.cornerRadius = 8
         button.backgroundColor = .kolesaGray
