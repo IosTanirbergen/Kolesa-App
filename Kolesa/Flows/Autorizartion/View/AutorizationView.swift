@@ -11,7 +11,7 @@ final class AutorizationView: UIViewController {
     
     lazy var numberTextField: UITextField = {
         
-        let tF = RegisterTextField(placeholder: "Введите номер телефона")
+        let tF = RegistrationTextField(placeholder: "Введите номер телефона")
         tF.delegate = self
         //        let RV = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
         //        RV.addSubview(deleteButton)
@@ -90,16 +90,10 @@ final class AutorizationView: UIViewController {
     @objc func checkTF(){
         if numberTextField.text != nil {
 
-            goButton.backgroundColor = UIColor(red: 42/255,
-                                               green: 129/255,
-                                               blue: 219/255,
-                                               alpha: 1)
+            goButton.backgroundColor = .kolesaBlue
 
         } else {
-            goButton.backgroundColor = UIColor(red: 242/255,
-                                               green: 242/255,
-                                               blue: 242/255,
-                                               alpha: 1)
+            goButton.backgroundColor = .kolesaGray
         }
     }
     
@@ -109,19 +103,13 @@ final class AutorizationView: UIViewController {
 extension AutorizationView: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        textField.layer.borderColor = UIColor(red: 42/255,
-                                                    green: 129/255,
-                                                    blue: 219/255,
-                                                    alpha: 1).cgColor
+        textField.layer.borderColor = UIColor.kolesaBlue.cgColor
         return true
     }
     
     override func touchesBegan(_ touches:Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
-            numberTextField.layer.borderColor = UIColor(red: 242/255,
-                                                    green: 242/255,
-                                                    blue: 242/255,
-                                                    alpha: 1).cgColor
+        numberTextField.layer.borderColor = UIColor.kolesaGray.cgColor
         }
     
 }

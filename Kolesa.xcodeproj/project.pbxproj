@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		1D39B5AE29C0B0B700D441B6 /* UIView+AddSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5AD29C0B0B700D441B6 /* UIView+AddSubviews.swift */; };
 		1D39B5B129C0B28700D441B6 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5B029C0B28700D441B6 /* AuthorizationViewController.swift */; };
-		1D39B5B429C0B3AA00D441B6 /* KolesaLogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5B329C0B3AA00D441B6 /* KolesaLogoTableViewCell.swift */; };
+		1D39B5B429C0B3AA00D441B6 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5B329C0B3AA00D441B6 /* DefaultTableViewCell.swift */; };
 		1D39B5B629C0B40B00D441B6 /* UITableView + Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5B529C0B40B00D441B6 /* UITableView + Register.swift */; };
-		1D39B5BA29C0B8FB00D441B6 /* AuthorizationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5B929C0B8FB00D441B6 /* AuthorizationBuilder.swift */; };
-		1D39B5BC29C0B92100D441B6 /* KolesaLogoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5BB29C0B92100D441B6 /* KolesaLogoCellViewModel.swift */; };
-		1D39B5BF29C0B97F00D441B6 /* AuthorizationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5BE29C0B97F00D441B6 /* AuthorizationMock.swift */; };
 		1D39B5C129C0B9F000D441B6 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5C029C0B9F000D441B6 /* AuthorizationViewModel.swift */; };
 		1DCD857229BF3B3C00229648 /* AutorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD857129BF3B3C00229648 /* AutorizationView.swift */; };
 		1DCD857429BF429000229648 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCD857329BF429000229648 /* RegisterTextField.swift */; };
+		1DD1840A29C6F8C400866DB1 /* UserDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD1840929C6F8C400866DB1 /* UserDefaultTableViewCell.swift */; };
+		1DD1840C29C70CE200866DB1 /* Colors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD1840B29C70CE200866DB1 /* Colors+Extension.swift */; };
 		839114BB29BC7303001CAC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839114BA29BC7303001CAC02 /* AppDelegate.swift */; };
 		839114BF29BC7303001CAC02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839114BE29BC7303001CAC02 /* HomeViewController.swift */; };
 		839114C429BC7305001CAC02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839114C329BC7305001CAC02 /* Assets.xcassets */; };
@@ -36,14 +35,13 @@
 /* Begin PBXFileReference section */
 		1D39B5AD29C0B0B700D441B6 /* UIView+AddSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddSubviews.swift"; sourceTree = "<group>"; };
 		1D39B5B029C0B28700D441B6 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
-		1D39B5B329C0B3AA00D441B6 /* KolesaLogoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolesaLogoTableViewCell.swift; sourceTree = "<group>"; };
+		1D39B5B329C0B3AA00D441B6 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		1D39B5B529C0B40B00D441B6 /* UITableView + Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Register.swift"; sourceTree = "<group>"; };
-		1D39B5B929C0B8FB00D441B6 /* AuthorizationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationBuilder.swift; sourceTree = "<group>"; };
-		1D39B5BB29C0B92100D441B6 /* KolesaLogoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolesaLogoCellViewModel.swift; sourceTree = "<group>"; };
-		1D39B5BE29C0B97F00D441B6 /* AuthorizationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationMock.swift; sourceTree = "<group>"; };
 		1D39B5C029C0B9F000D441B6 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		1DCD857129BF3B3C00229648 /* AutorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationView.swift; sourceTree = "<group>"; };
 		1DCD857329BF429000229648 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
+		1DD1840929C6F8C400866DB1 /* UserDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTableViewCell.swift; sourceTree = "<group>"; };
+		1DD1840B29C70CE200866DB1 /* Colors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extension.swift"; sourceTree = "<group>"; };
 		839114B729BC7303001CAC02 /* Kolesa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kolesa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839114BA29BC7303001CAC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839114BE29BC7303001CAC02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +76,7 @@
 			children = (
 				1D39B5AD29C0B0B700D441B6 /* UIView+AddSubviews.swift */,
 				1D39B5B529C0B40B00D441B6 /* UITableView + Register.swift */,
+				1DD1840B29C70CE200866DB1 /* Colors+Extension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -94,7 +93,8 @@
 		1D39B5B229C0B39500D441B6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1D39B5B329C0B3AA00D441B6 /* KolesaLogoTableViewCell.swift */,
+				1D39B5B329C0B3AA00D441B6 /* DefaultTableViewCell.swift */,
+				1DD1840929C6F8C400866DB1 /* UserDefaultTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -102,33 +102,14 @@
 		1D39B5B729C0B8D700D441B6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1D39B5BB29C0B92100D441B6 /* KolesaLogoCellViewModel.swift */,
 				1D39B5C029C0B9F000D441B6 /* AuthorizationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		1D39B5B829C0B8DE00D441B6 /* Builder */ = {
-			isa = PBXGroup;
-			children = (
-				1D39B5B929C0B8FB00D441B6 /* AuthorizationBuilder.swift */,
-			);
-			path = Builder;
-			sourceTree = "<group>";
-		};
-		1D39B5BD29C0B96800D441B6 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				1D39B5BE29C0B97F00D441B6 /* AuthorizationMock.swift */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
 		1DCD856F29BF392A00229648 /* Autorizartion */ = {
 			isa = PBXGroup;
 			children = (
-				1D39B5BD29C0B96800D441B6 /* Mock */,
-				1D39B5B829C0B8DE00D441B6 /* Builder */,
 				1D39B5B729C0B8D700D441B6 /* ViewModel */,
 				1D39B5AF29C0B26300D441B6 /* ViewController */,
 				1DCD857029BF3AF900229648 /* View */,
@@ -371,20 +352,19 @@
 				1D39B5B129C0B28700D441B6 /* AuthorizationViewController.swift in Sources */,
 				839114DD29BC73B8001CAC02 /* HomeBuilder.swift in Sources */,
 				839114ED29BC7555001CAC02 /* GridMenuColllectionViewCell.swift in Sources */,
+				1DD1840C29C70CE200866DB1 /* Colors+Extension.swift in Sources */,
 				839114DF29BC7426001CAC02 /* HomeCoordinator.swift in Sources */,
 				839114EB29BC7555001CAC02 /* GridMenuTableViewCell.swift in Sources */,
-				1D39B5BC29C0B92100D441B6 /* KolesaLogoCellViewModel.swift in Sources */,
 				839114F129BC7572001CAC02 /* HomeHeaderView.swift in Sources */,
 				1D39B5AE29C0B0B700D441B6 /* UIView+AddSubviews.swift in Sources */,
 				839114E129BC742D001CAC02 /* HomeVIewModel.swift in Sources */,
-				1D39B5B429C0B3AA00D441B6 /* KolesaLogoTableViewCell.swift in Sources */,
-				1D39B5BA29C0B8FB00D441B6 /* AuthorizationBuilder.swift in Sources */,
+				1D39B5B429C0B3AA00D441B6 /* DefaultTableViewCell.swift in Sources */,
 				839114EE29BC7555001CAC02 /* PostsTableViewCell.swift in Sources */,
 				1DCD857229BF3B3C00229648 /* AutorizationView.swift in Sources */,
-				1D39B5BF29C0B97F00D441B6 /* AuthorizationMock.swift in Sources */,
 				1D39B5C129C0B9F000D441B6 /* AuthorizationViewModel.swift in Sources */,
 				839114BB29BC7303001CAC02 /* AppDelegate.swift in Sources */,
 				839114D629BC735B001CAC02 /* Protocols.swift in Sources */,
+				1DD1840A29C6F8C400866DB1 /* UserDefaultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +503,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 67V6V79892;
+				DEVELOPMENT_TEAM = 85NV4V26D2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Kolesa/Core Layer/Resources + Config/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -550,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 67V6V79892;
+				DEVELOPMENT_TEAM = 85NV4V26D2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Kolesa/Core Layer/Resources + Config/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

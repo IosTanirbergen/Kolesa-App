@@ -8,16 +8,13 @@
 import UIKit
 
 final class AuthorizationViewController: UIViewController {
-//    private lazy var logoImageView: UIImageView = {
-//        let img = UIImageView()
-//        img.image = .init(named: "kolesa.logo")
-//        return img
-//    }()
-    
+
     // MARK: - Properties
     private lazy var tableView: UITableView = {
         let tv = UITableView()
+        tv.separatorStyle = .none
         tv.backgroundColor = .white
+        tv.isScrollEnabled = false
         return tv
     }()
     
@@ -30,61 +27,69 @@ final class AuthorizationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(tableView)
+        setup()
+    }
+    private func setup() {
+        bindViewModel()
+        setupViews()
+        setupTableView()
+        makeConstraints()
         
-        tableView.register(KolesaLogoTableViewCell.self, forCellReuseIdentifier: KolesaLogoTableViewCell.description())
-        tableView.delegate = self
-        tableView.dataSource = self
-        
+    }
+    private func bindViewModel() {
+        viewModel.updateView = { [weak self] in
+            guard let self = self else {
+                return
+            }
+
+            self.tableView.reloadData()
+        }
+    }
+    private func makeConstraints() {
         tableView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
             $0.leading.trailing.bottom.equalToSuperview()
         }
-        
-        
-        
-        
-        
-//        viewModel.updateView = { [weak self] in
-//            guard let self = self else {
-//                return
-//            }
-//
-//            self.tableView.reloadData()
-//        }
+    }
+    private func setupViews() {
+        view.backgroundColor = .white
+        view.addSubviews([tableView])
+    }
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(DefaultTableViewCell.self, forCellReuseIdentifier: DefaultTableViewCell.description())
+        tableView.register(UserDefaultTableViewCell.self, forCellReuseIdentifier: UserDefaultTableViewCell.description())
     }
 }
 
 extension AuthorizationViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let type = viewModel.state[indexPath.section].row[indexPath.row]
+        let type = viewModel.state
+    
+        switch type {
+        case .defaultState:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DefaultTableViewCell.description(), for: indexPath) as? DefaultTableViewCell else { return UITableViewCell() }
+            cell.nextButton.addTarget(self, action: #selector(checkState), for: .touchUpInside)
+            return cell
+
+        case .defaultUser:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: UserDefaultTableViewCell.description(), for: indexPath) as?
+                    UserDefaultTableViewCell else { return UITableViewCell() }
+            cell.phoneNumberTextField.addTarget(self, action: #selector(changeState), for: .allEditingEvents)
+            return cell
+        case .none:
+            print("none")
+        case .newUser:
+            print("newUser")
+        }
         
-        let cell = KolesaLogoTableViewCell()
-        cell.backgroundColor = .white
-        return cell
-//        switch type {
-//        case .phoneNumber:
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: KolesaLogoTableViewCell.description(), for: indexPath) as? KolesaLogoTableViewCell else {
-//                return UITableViewCell()
-//            }
-//
-//        case .password:
-//        case .otp:
-//        }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 50
-        case 1:
-            return 60
-        case 2:
-            return 70
-        default:
-            return 0
-        }
+        return 600
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -92,6 +97,14 @@ extension AuthorizationViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
+        
+    }
+    @objc func checkState() {
+        viewModel.updateState(state: .defaultUser)
+    }
+    @objc func changeState() {
+        viewModel.updateState(state: .defaultState)
     }
 }
+

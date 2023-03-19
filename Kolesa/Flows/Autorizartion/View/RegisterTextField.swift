@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-final class RegisterTextField: UITextField {
+final class RegistrationTextField: UITextField {
     
     private let edgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 10)
     
